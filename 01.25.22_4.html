@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>A Fun Game!</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=devide-width,initial-scale=1.0">
+</head>
+
+<style>
+  body {
+    background-color: lightpink;
+  }
+
+  div {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+  }
+
+  img {
+    width: 30%;
+    height: 30%;
+  }
+
+  p {
+    font-family: "Courier New"
+  }
+
+  button {
+    font-family: "Courier New"
+  }
+</style>
+
+<body>
+  <div>
+    <a href="01.25.22_4.html"> <img src="https://preview.redd.it/m3uega90tuv31.gif?width=324&auto=webp&s=0c9240eb32c1f8ce05ede43fe7162a5f1b887997">
+    </a>
+  </div>
+
+  <div>
+    <p>haha</p>
+  </div>
+
+  <div>
+    <p>im a goose</p>
+  </div>
+
+  <div>
+    <p>catch me if u can</p>
+  </div>
+
+  <div>
+    <p>click me</p>
+  </div>
+
+  <div>
+    <p>oh no u are fast</p>
+  </div>
+
+  <div>
+    <a href="index.html">
+      <button>Home</button>
+    </a>
+  </div>
+
+  <div>
+    <a href="01.25.22_4.html">
+      <button>I can't find him. Help me.</button>
+    </a>
+  </div>
+
+  <script>
+    // collect all the divs
+    var divs = document.getElementsByTagName('div');
+    // get window width and height
+    var winWidth = window.innerWidth;
+    var winHeight = window.innerHeight;
+
+    // i stands for "index". you could also call this banana or haircut. it's a variable
+    for (var i = 0; i < divs.length; i++) {
+
+      // shortcut! the current div in the list
+      var thisDiv = divs[i];
+
+      // get random numbers for each element
+      randomTop = getRandomNumber(0, winHeight);
+      randomLeft = getRandomNumber(0, winWidth);
+
+      // update top and left position
+      thisDiv.style.top = randomTop + "px";
+      thisDiv.style.left = randomLeft + "px";
+
+    }
+
+    // function that returns a random number between a min and max
+    function getRandomNumber(min, max) {
+
+      return Math.random() * (max - min) + min;
+
+    }
+  </script>
+
+</body>
+
+</html>

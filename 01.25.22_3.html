@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Caroline Versaw - IGD2</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=devide-width,initial-scale=1.0">
+</head>
+
+<style>
+html {
+  background: url(https://www.icegif.com/wp-content/uploads/black-hole-icegif-7.gif) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  label {
+    color: white;
+  }
+</style>
+
+<body>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="container">
+    <div class="center">
+      <center>
+        <label for="pass">My name is...</label>
+        <br>
+        <br>
+        <input id="pass" type="password">
+        <br>
+        <br>
+        <input type="submit" value="Submit" onclick="myFunction()">
+        <br>
+        <br>
+        <a href="index.html"> <button>Home</button>
+        </a>
+      </center>
+    </div>
+  </div>
+
+  <script>
+    function myFunction() {
+      var pass = document.getElementById("pass").value;
+
+      if (pass == "will") {
+        window.location.href = "01.25.22_3W.html"
+      }
+      if (pass == "herdimas") {
+        window.location.href = "01.25.22_3H.html"
+      }
+      if (pass == "liam") {
+        window.location.href = "01.25.22_3L.html"
+      }
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Caroline Versaw - IGD2</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=devide-width,initial-scale=1.0">
+
+  <style>
+    body {
+      background-color: #EFDD7B;
+    }
+    img {
+      width: 20%;
+      height: 20%;
+    }
+    h1 {
+      font-family: cursive;
+    }
+  </style>
+
+</head>
+
+<body>
+  <center>
+    <br />
+    <h1>Click me!</h1>
+    <br />
+    <br />
+    <div class="container" style="text-align: center; margin-top: 5em;">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/51P4d2FzWtL.jpg" onclick="enlargeImg()" id="img1" />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <button onclick="resetImg()">Reset</button>
+    </div>
+
+    <a href="index.html"> <button>Home</button>
+    </a>
+
+    <script>
+      img = document.getElementById("img1");
+
+      function enlargeImg() {
+        img.style.transform = "scale(1.5)";
+        img.style.transition = "transform 0.25s ease";
+      }
+
+      function resetImg() {
+        img.style.transform = "scale(1)";
+        img.style.transitin = "transform 0.25s ease";
+      }
+    </script>
+  </center>
+</body>
+
+</html>

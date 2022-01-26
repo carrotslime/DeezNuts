@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Caroline Versaw - IGD2</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=devide-width,initial-scale=1.0">
+</head>
+
+<div class='console-container'><span id='text'></span>
+  <div class='console-underscore' id='console'>&#95;</div>
+</div>
+
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+  body {
+    background: #111;
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+
+  .console-container {
+
+    font-family: Khula;
+    font-size: 4em;
+    text-align: center;
+    height: 200px;
+    width: 600px;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .console-underscore {
+    display: inline-block;
+    position: relative;
+    top: -0.14em;
+    left: 10px;
+  }
+
+  button {
+    margin-top: 5000px;
+    margin-bottom: 400px;
+    width: 100px;
+    height: 40px;
+    font-family: "Courier New"
+  }
+  p {
+    margin-top: 6000px;
+    margin-bottom: 400px;
+    font-family: "Courier New"
+  }
+</style>
+
+<body>
+  <center>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+      <button>Button.</button>
+    </a>
+    <p>Love ya :)<br>Now go back to the button, asshole.</p>
+  </center>
+
+  <script>
+    // function([string1, string2],target id,[color1,color2])
+    consoleText(['Hey, Liam :)', 'You may be thinking...', 'Why is this page so darn complicated?', 'Or...', 'I want Breugs. Give bagel now. Chompa chompa', 'Well...', 'I just wanted to say...', 'Meesa thinks that yousa...', 'Just kidding.',
+      'I wont speak Jar Jar.', 'Anyways...', 'Im really grateful to have you in my life', 'So thank you for sticking with me.', 'Being with you makes me very happy.', 'This animation plays so slowly...',
+      'If you make it this far I will be surprised', 'Hello?', 'You still there?', 'Moral of the story is...', 'You are a butthead <3', 'You can scroll down now...', 'The button is thattaway ↓', 'Bye...', 'Why are you still here?',
+      'I just told you where the next button is.', '...', 'Okay...', 'Its obvious now.', 'You just like seeing me talk.', 'Or maybe you fell asleep.', 'Or youre completely zoned out.', 'Cant blame you.', 'This is such a long message.',
+      'Im bored.', 'Wanna go to Olive Garden?', 'No?', 'Fine.', 'Im going to restart this message now.', 'Bye for real...', 'Im resetting in 3...', '2...', '1...', 'Goodbye.', ' ', ' ', ' ', '<3'
+    ], 'text', ['tomato', '#FEE12B', 'rebeccapurple', 'lightblue']);
+
+    function consoleText(words, id, colors) {
+      if (colors === undefined) colors = ['#fff'];
+      var visible = true;
+      var con = document.getElementById('console');
+      var letterCount = 1;
+      var x = 1;
+      var waiting = false;
+      var target = document.getElementById(id)
+      target.setAttribute('style', 'color:' + colors[0])
+      window.setInterval(function() {
+
+        if (letterCount === 0 && waiting === false) {
+          waiting = true;
+          target.innerHTML = words[0].substring(0, letterCount)
+          window.setTimeout(function() {
+            var usedColor = colors.shift();
+            colors.push(usedColor);
+            var usedWord = words.shift();
+            words.push(usedWord);
+            x = 1;
+            target.setAttribute('style', 'color:' + colors[0])
+            letterCount += x;
+            waiting = false;
+          }, 1000)
+        } else if (letterCount === words[0].length + 1 && waiting === false) {
+          waiting = true;
+          window.setTimeout(function() {
+            x = -1;
+            letterCount += x;
+            waiting = false;
+          }, 1000)
+        } else if (waiting === false) {
+          target.innerHTML = words[0].substring(0, letterCount)
+          letterCount += x;
+        }
+      }, 120)
+      window.setInterval(function() {
+        if (visible === true) {
+          con.className = 'console-underscore hidden'
+          visible = false;
+
+        } else {
+          con.className = 'console-underscore'
+
+          visible = true;
+        }
+      }, 400)
+    }
+  </script>
