@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "unown";
+  src: url(Unown.ttf) format("TrueType");
+}
+
+p{
+  font-family: "unown";
+  font-size: 20pt;
+  color: white;
+  margin-top: 275px;
+}
+
+input{
+  font-family: "Courier New";
+  font-size: 14pt;
+  height: 37px;
+  margin-top: 7px;
+}
+
+.submit{
+  font-family: "Courier New";
+  font-size: 14pt;
+  height: 37px;
+  margin-top: 7px;
+}
+
+button{
+  font-family: "unown";
+  font-size: 20pt;
+}
+
+.Unown{
+  font-family: "unown";
+  font-size: 20pt;
+}
+
+body{
+  background-image: url(https://media.istockphoto.com/photos/rough-black-art-paper-seamless-texture-blank-page-background-picture-id905396600?k=20&m=905396600&s=170667a&w=0&h=nOfdyucQ0GavxjBCySguFKtSr65E3i-JfrR8PCGmP_o=);
+  text-align: center;
+}
+
+.lame {
+  font-family: "Courier New";
+  font-size: 14pt;
+  height: 37px;
+  margin-top: 7px;
+}
+
+table {
+  color: white;
+}
+
+img{
+  height: 10%;
+}
+
+.unownChart{
+  align-items: center;
+  background-color: lightgrey;
+  border: 10px solid black;
+  width: 750px;
+  height: 500px;
+  padding: 15px;
+}
